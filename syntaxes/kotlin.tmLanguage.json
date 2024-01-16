@@ -204,18 +204,7 @@
                             "name": "keyword.other.documentation.javadoc.kotlin"
                         },
                         {
-                            "match": "(@param|@property)\\s+(\\S+)",
-                            "captures": {
-                                "1": {
-                                    "name": "keyword.other.documentation.javadoc.kotlin"
-                                },
-                                "2": {
-                                    "name": "variable.parameter.kotlin"
-                                }
-                            }
-                        },
-                        {
-                            "match": "(@param)\\[(\\S+)\\]",
+                            "match": "(@param)\\s+(\\S+)",
                             "captures": {
                                 "1": {
                                     "name": "keyword.other.documentation.javadoc.kotlin"
@@ -270,6 +259,9 @@
                 },
                 {
                     "include": "#control-keywords"
+                },
+                {
+                    "include": "#map-keywords"
                 }
             ]
         },
@@ -413,7 +405,7 @@
             ]
         },
         "parameter-declaration": {
-            "match": "\\b(\\w+)\\s*(:)\\s*(\\w+)(\\?)?",
+            "match": "\\b(\\w+)\\s*(:)\\s*(\\w+)(\\?)?(,)?",
             "captures": {
                 "1": {
                     "name": "variable.parameter.kotlin"
@@ -426,6 +418,9 @@
                 },
                 "4": {
                     "name": "keyword.operator.optional"
+                },
+                "5": {
+                    "name": "punctuation.separator.delimiter.kotlin"
                 }
             }
         },
