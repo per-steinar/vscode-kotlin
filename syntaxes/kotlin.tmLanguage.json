@@ -98,9 +98,6 @@
                     "include": "#variable-declaration"
                 },
                 {
-                    "include": "#constant-declaration"
-                },
-                {
                     "include": "#object"
                 },
                 {
